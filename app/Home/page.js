@@ -203,7 +203,6 @@ const Home = () => {
 
   return (
     <div>
-      {/* header */}
       <header className={` ${scroll ? "scroll-background" : ""}`}>
         <div className="container-1">
           <div className="flex-container">
