@@ -16,7 +16,7 @@ import "swiper/css/pagination";
 const data = [
   { name: "Collections", Link: "/#" },
   { name: "Residences", Link: "/#" },
-  { name: "Boutiques", Link: "/#" },
+  { name: "Boutiques", Link: "/#" }, 
 ];
 
 const data1 = [
