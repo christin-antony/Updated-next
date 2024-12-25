@@ -16,7 +16,7 @@
 body {
   padding: 0;
   margin: 0;
-  scroll-behavior: smooth; 
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -26,13 +26,116 @@ body {
 
 /* page-1 */
 
-header {
+.containerX {
   position: fixed;
+  z-index: 1002;
   width: 100%;
-  z-index: 1000 !important;
   background-color: transparent;
   border-bottom: 1px solid #a0a0a0;
   backdrop-filter: blur(20px);
+  justify-content: center;
+}
+.container0 {
+  position: fixed;
+  z-index: 1002;
+  width: 100%;
+  background-color:#EDE8E1;
+  justify-content: center;
+}
+
+.wrapperX {
+  padding: 2% 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1372px;
+  width: 100%;
+  margin: auto;
+  box-sizing: border-box;
+}
+.wrapperY {
+  padding: .5% 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1372px;
+  width: 100%;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.left-section {
+  flex: 1;
+}
+
+.center-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-section {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+}
+
+.hamburgerIcon {
+  cursor: pointer;
+  width: 30px;
+  height: 20px;
+  position: relative;
+  z-index: 1002;
+  display: none;
+}
+
+.activeHamburger {
+  background: transparent;
+  transform: translateX(-50px);
+}
+
+.sidenav {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  transform: translateY(-150%);
+  transition: all 900ms ease-in-out;
+  top: 18%; 
+  z-index: 1001;
+}
+
+.activeSidenav {
+  transform: translateY(0);
+  padding-top: 0%;
+}
+
+.icon_container {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 10px;
+  margin-top: 45px;
+}
+.icon_containerX {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 10px;
+ 
+}
+
+
+header {
+  position: fixed;
+  width: 100%;
+  background-color: transparent;
+  border-bottom: 1px solid #a0a0a0;
+  backdrop-filter: blur(20px);
+  z-index: 1000;
 }
 
 .scroll-background {
@@ -63,12 +166,14 @@ header {
   flex: 40%;
   display: flex;
   justify-content: left;
+  z-index: 100000;
 }
 
 .column-2 {
   flex: 20%;
   display: grid;
   place-items: center;
+  z-index: 10000;
 }
 
 .column-3 {
@@ -81,17 +186,15 @@ header {
   height: 33px;
   border-radius: 50px;
   border: 1px solid white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 3px;
   transition: color 0.3s ease;
   cursor: pointer;
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-:hover > .icon-1 {
-  color: goldenrod !important;
-}
 
 .icon-1-Y {
   width: 33px;
@@ -115,16 +218,13 @@ header {
   height: 33px;
   border-radius: 50px;
   border: 1px solid #380913;
-  display: flex;
+  display: flex !important;
   justify-content: center;
   align-items: center;
   padding: 3px;
   transition: color 0.3s ease;
   cursor: pointer;
-}
-
-:hover > .icon-1-X {
-  color: goldenrod !important;
+  display: block;
 }
 
 .nav-right ul {
@@ -154,7 +254,7 @@ header {
   justify-content: end;
   gap: 15%;
   list-style-type: none;
-  margin-top: 55px;
+  /* margin-top: 55px; */
   padding: 0;
 }
 
@@ -171,14 +271,6 @@ header {
   color: goldenrod;
 }
 
-.icon_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  padding-top: 10%;
-}
-
 .div1Icon {
   color: white;
   width: 24px;
@@ -189,18 +281,13 @@ header {
   width: 24px;
   height: 24px;
 }
-.div1Icon:hover {
-  color: goldenrod;
-}
 
 .div1Icon-X {
-  color: #380913;
+  color: #380913 !important;
   width: 24px;
   height: 24px;
 }
-.div1Icon-X:hover {
-  color: goldenrod;
-}
+
 
 .drop_1 {
   background-color: transparent;
@@ -224,6 +311,7 @@ header {
   font-family: "latef";
   cursor: pointer;
 }
+
 .drop_1-X :hover {
   color: goldenrod;
 }
@@ -232,14 +320,9 @@ header {
   width: 205px;
   height: 119px;
 }
-
-.hamburgerIcon {
-  cursor: pointer;
-  width: 30px;
-  height: 20px;
-  margin-top: 55px;
-  display: none;
-  padding-top: 55px;
+.imgY {
+  width: 100px;
+  height: 60px;
 }
 
 .hamburger {
@@ -323,7 +406,7 @@ header {
   transform: translateX(-50px);
   background: transparent;
   transition: all 0.5s ease-in-out;
-  z-index: 1000;
+  z-index: 10000;
 }
 
 .activeHamburger::before {
@@ -346,24 +429,6 @@ header {
   border-radius: 5px;
   transition: all 0.5s ease-in-out;
   transform: rotate(-45deg) translate(35px, 35px);
-}
-
-.sidenav {
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  background-color: #ffffff;
-  transform: translateY(-100%);
-  transition: all 900ms ease-in-out;
-  top: -100%;
-  left: 0;
-  z-index: 1000;
-  padding-top: 0%;
-}
-
-.activeSidenav {
-  transform: translateX(0%);
-  padding-top: 120px;
 }
 
 .sidenavContent {
@@ -414,6 +479,53 @@ header {
   align-items: center;
   justify-content: flex-start;
 }
+
+@media screen and (max-width: 1200px) {
+  .hamburgerIcon {
+    display: block;
+  }
+  .nav-right {
+    display: none;
+  }
+  .nav-right-X {
+    display: none !important;
+  }
+  .icon-1-X {
+    display: none !important;
+  }
+  .icon-1 {
+    display: none !important;
+  }
+  .drop_1 {
+    font-size: clamp(10px, 4vw, 24px) !important;
+  }
+  .drop_1-X {
+    font-size: clamp(10px, 4vw, 24px) !important;
+  }
+  .icon_container {
+    
+    margin-top: 10px;
+  }
+}
+@media (max-width: 320px) {
+  .imgX {
+    width: 102.5px !important ;
+    height: 60px !important;
+  }
+  .sidenav {
+    top: 11%;
+  }
+}
+@media (max-width: 425px) {
+  .imgX {
+    width: 150.5px !important ;
+    height: 80px !important;
+  }
+  .sidenav {
+    top: 13%;
+  }
+}
+
 
 /* page-1 */
 
@@ -550,7 +662,6 @@ header {
 }
 
 @media screen and (max-width: 1200px) {
- 
   .booking-dropdown {
     font-size: 22px;
     padding: 12px 25px;
@@ -567,30 +678,27 @@ header {
   .custom-list {
     flex-direction: column;
     gap: 15px;
-    
   }
-  
+
   .custom-list li {
     flex: 1 1 100%;
     max-width: 100%;
   }
-  
+
   .custom-list li:last-child {
     flex: 1 1 100%;
     max-width: 100%;
   }
-  
+
   .booking-dropdown {
     font-size: 20px;
   }
-  .hero-sectioN{
+  .hero-sectioN {
     height: 110vh;
   }
 }
 
 @media screen and (max-width: 992px) {
- 
-
   .booking-dropdown {
     font-size: 20px;
     height: 55px;
@@ -617,7 +725,7 @@ header {
 
   .hero-titlE {
     margin-bottom: 10%;
-    
+
     padding-top: 45%;
   }
 
@@ -625,25 +733,25 @@ header {
     flex-direction: column;
     gap: 10px;
   }
-  
+
   .custom-list li,
   .custom-list li:last-child {
     flex: 1 1 100%;
     max-width: 100%;
     margin-bottom: 10px;
   }
-  
+
   .booking-dropdown {
     font-size: 16px;
     height: 50px;
     padding: 10px 15px;
   }
-  
+
   .dropdown-li::after {
     right: 15px;
     padding: 2px;
   }
-  
+
   .search-rates-button {
     font-size: 16px;
     height: 50px;
@@ -672,17 +780,15 @@ header {
   }
 }
 @media screen and (max-width: 400px) {
-
   .hero-titlE {
     width: 70%;
     margin-bottom: 5%;
-    
+
     padding-top: 45%;
   }
   .hero-sectioN {
     height: 70vh;
   }
-
 }
 
 /* page-2 */
@@ -759,7 +865,7 @@ header {
   margin: 0;
   padding-top: 30px;
   padding-bottom: 10px;
-  width: 28%;
+  width: 70%;
   text-align: left;
 }
 
@@ -770,7 +876,7 @@ header {
   color: var(--slide-1-color);
   margin: 0;
   padding: 5px 0;
-  width: 45%;
+  width: 75%;
   text-align: left;
 }
 
@@ -830,7 +936,7 @@ header {
   }
 
   .slider-1-p1 {
-    width: 35%;
+    /* width: 35%; */
   }
 
   .slider-1-p2 {
@@ -863,7 +969,7 @@ header {
 
   .slider-1-p1 {
     font-size: 16px;
-    width: 45%;
+    /* width: 45%; */
   }
 
   .slider-1-p2 {
@@ -894,7 +1000,7 @@ header {
 
   .slider-1-p1 {
     font-size: 15px;
-    width: 55%;
+    /* width: 55%; */
   }
 
   .slider-1-p2 {
@@ -929,7 +1035,7 @@ header {
 
   .slider-1-p1 {
     font-size: 14px;
-    width: 70%;
+    /* width: 70%; */
   }
 
   .slider-1-p2 {
@@ -2254,23 +2360,14 @@ header {
 }
 
 @media screen and (max-width: 1024px) {
-  .imgX {
-    width: 140px !important;
-    height: 95px !important;
-  }
+ 
 }
 
 @media screen and (max-width: 800px) {
-  .imgX {
-    width: 110px;
-    height: 85px;
-  }
+ 
 }
 @media screen and (max-width: 600px) {
-  .imgX {
-    width: 100px !important;
-    height: 75px !important;
-  }
+ 
 }
 @media screen and (max-width: 1500px) {
   .container-9 {
@@ -2281,6 +2378,9 @@ header {
   }
   .container-8 {
     width: 90%;
+  }
+  .column-1 {
+    z-index: 1000;
   }
   @media screen and (max-width: 1400px) {
     .container-9 {
@@ -2299,96 +2399,18 @@ header {
     }
   }
   @media screen and (max-width: 1200px) {
-
-    .container-9 {
-      width: 90%;
-    }
-    .container-10 {
-      width: 90%;
-    }
-
-    .nav-right {
-      display: none;
-    }
-    .nav-right-X {
-      display: none;
-    }
-    .hamburgerIcon {
-      display: block;
-    }
-    .hamburgerIconX {
-      display: block;
-    }
-    .icon-1-X {
-      display: none;
-    }
-
-    .icon-1 {
-      display: none;
-      /* z-index: 2000; */
-    }
-    .column-3 {
-      justify-content: right;
-      z-index: 2000;
-      flex: 20%;
-    }
-    .icon_container {
-      padding-left: 5%;
-    }
-    .column-1 {
-      flex: 20%;
-    }
-    .column-2 {
-      flex: 60%;
-    }
-    .drop_1 {
-      font-size: clamp(10px, 4vw, 24px);
-    }
-    .drop_1-X {
-      font-size: clamp(10px, 4vw, 24px);
-    }
-    .imgX {
-      width: 180px;
-      height: 90px;
-      /* padding-top: 8%;
-      padding-bottom: 8%; */
-    }
+   
   }
-  @media screen and (max-width: 425px) {
-    .imgX {
-      width: 90px !important;
-      height: 65px !important;
-      /* padding-top: 10%;
-      padding-bottom: 10%; */
-    }
-  }
-  @media screen and (max-width: 1100px) {
-    .container-9 {
-      width: 90%;
-    }
-    .container-10 {
-      width: 90%;
-    }
-  }
-}
-/* 
-
-@media screen and (max-width: 1300px) {
-
-}
-
-@media screen and (max-width: 1024px) {
-
-}
-
-@media screen and (max-width: 768px) {
  
 }
-
-@media screen and (max-width: 600px) {
- 
+@media screen and (max-width: 425px) {
+}
+@media screen and (max-width: 1100px) {
+  .container-9 {
+    width: 90%;
+  }
+  .container-10 {
+    width: 90%;
+  }
 }
 
-@media screen and (max-width: 480px) {
-  
-} */

@@ -9,6 +9,7 @@ import { IoLogoInstagram } from "react-icons/io";
 import { BsTwitterX } from "react-icons/bs";
 import { FaLinkedin } from "react-icons/fa";
 
+
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -16,7 +17,7 @@ import "swiper/css/pagination";
 const data = [
   { name: "Collections", Link: "/#" },
   { name: "Residences", Link: "/#" },
-  { name: "Boutiques", Link: "/#" }, 
+  { name: "Boutiques", Link: "/#" },
 ];
 
 const data1 = [
@@ -203,78 +204,70 @@ const Home = () => {
 
   return (
     <div>
-      <header className={` ${scroll ? "scroll-background" : ""}`}>
-        <div className="container-1">
-          <div className="flex-container">
-            <div className="column-1">
-              <div className="icon_container">
-                <div className={` ${scroll ? "icon-1-X" : "icon-1"}`}>
-                  <PersonIcon
-                    className={` ${scroll ? "div1Icon_X" : "div1Icon"}`}
-                  />
-                </div>
-                <select className={` ${scroll ? "drop_1-X" : "drop_1"}`}>
-                  <option value="EN">EN</option>
-                  <option value="ML">ML</option>
-                </select>
+      <div  className={` ${scroll ? "container0" : "containerX"}`}>
+        <div  className={` ${scroll ? "wrapperY" : "wrapperX"}`}>
+          <div className="left-section">
+            <div className={` ${scroll ? "icon_containerX" : "icon_container"}`}>
+              <div className={` ${scroll ? "icon-1-X" : "icon-1"}`}>
+                <PersonIcon
+                  className={` ${scroll ? "div1Icon_X" : "div1Icon"}`}
+                />
               </div>
+              <select className={` ${scroll ? "drop_1-X" : "drop_1"}`}>
+                <option value="EN">EN</option>
+                <option value="ML">ML</option>
+              </select>
             </div>
-            <div className="column-2">
-              <img
-                src={scroll ? "/images/Nlogo.png" : "/images/logo.png"}
-                alt="logoX"
-                className="imgX"
-              />
-            </div>
-            <div className="column-3">
-              <nav className={` ${scroll ? "nav-right-X" : "nav-right"}`}>
-                <ul>
-                  <li>
-                    <a href="/#">Collections</a>
-                  </li>
-                  <li>
-                    <a href="/#">Residences</a>
-                  </li>
-                  <li>
-                    <a href="/#">Boutiques</a>
-                  </li>
-                </ul>
-              </nav>
-              <div className="hamburgerIcon" onClick={() => setActive(!active)}>
-                <div
-                  className={`${scroll ? "hamburger" : "hamburgerX"} ${
-                    active ? "activeHamburger" : ""
-                  }`}
-                ></div>
-              </div>
-              <div className={`sidenav ${active ? "activeSidenav" : ""}`}>
-                <div className="icon-1-Y">
-                  <PersonIcon className="div1Icon_Y" />
-                </div>
+          </div>
 
-                <div className="side-container">
-                  <ul className="ulX">
-                    {data.map((item, i) => (
-                      <li key={i} className="ax-div-1">
-                        <a href={item.Link} className="aX">
-                          {item.name}
-                        </a>
-                      </li>
-                    ))}
-                    {data1.map((item, i) => (
-                      <li key={i} className="ax-div-1">
-                        <a href={item.Link} className="aY">
-                          {item.name}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
+          <div className="center-section">
+            <img src={scroll ? "/images/Nlogo.png" : "/images/logo.png"} alt="logoX"  className={` ${scroll ? "imgY" : "imgX"}`} />
+          </div>
+
+          <div className="right-section">
+            <nav className={` ${scroll ? "nav-right-X" : "nav-right"}`}>
+              <ul>
+                <li>
+                  <a href="/#">Collections</a>
+                </li>
+                <li>
+                  <a href="/#">Residences</a>
+                </li>
+                <li>
+                  <a href="/#">Boutiques</a>
+                </li>
+              </ul>
+            </nav>
+
+            <div className="hamburgerIcon" onClick={() => setActive(!active)}>
+              <div
+                className={`${scroll ? "hamburger" : "hamburgerX"} ${
+                  active ? "activeHamburger" : ""
+                }`}
+              ></div>
             </div>
           </div>
         </div>
-      </header>
+      </div>
+
+      <div className={`sidenav ${active ? "activeSidenav" : ""}`}>
+        <ul className="ulX">
+          {data.map((item, i) => (
+            <li key={i} className="ax-div-1">
+              <a href={item.Link} className="aX">
+                {item.name}
+              </a>
+            </li>
+          ))}
+          {data1.map((item, i) => (
+            <li key={i} className="ax-div-1">
+              <a href={item.Link} className="aY">
+                {item.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
 
       <div className="hero-sectioN">
         <video className="hero-videO" autoPlay loop muted>
@@ -344,7 +337,6 @@ const Home = () => {
               scrollbar={{
                 hide: true,
               }}
-
               loop={true}
               initialSlide={0}
               watchOverflow={true}
@@ -355,64 +347,64 @@ const Home = () => {
                   slidesPerView: 1,
                   spaceBetween: 20,
                   navigation: {
-                    enabled: true
+                    enabled: true,
                   },
                   pagination: {
                     enabled: false,
-                    type: "progressbar"
-                  }
+                    type: "progressbar",
+                  },
                 },
                 640: {
                   slidesPerView: 1,
                   spaceBetween: 20,
                   navigation: {
-                    enabled: false
+                    enabled: false,
                   },
                   pagination: {
                     enabled: true,
-                    type: "progressbar"
-                  }
+                    type: "progressbar",
+                  },
                 },
                 768: {
                   slidesPerView: 1.5,
                   spaceBetween: 30,
                   pagination: {
                     enabled: true,
-                    type: "progressbar"
-                  }
+                    type: "progressbar",
+                  },
                 },
                 1000: {
                   slidesPerView: 2,
                   spaceBetween: 30,
                   pagination: {
                     enabled: true,
-                    type: "progressbar"
-                  }
+                    type: "progressbar",
+                  },
                 },
                 1400: {
-                  slidesPerView: 2.3,
+                  slidesPerView: 2,
                   spaceBetween: 30,
                   pagination: {
                     enabled: true,
-                    type: "progressbar"
-                  }
+                    type: "progressbar",
+                  },
                 },
                 1600: {
                   slidesPerView: 2.5,
                   spaceBetween: 35,
                   pagination: {
                     enabled: true,
-                    type: "progressbar"
-                  }
+                    type: "progressbar",
+                  },
                 },
                 1800: {
                   slidesPerView: 2.5,
                   spaceBetween: 35,
                   pagination: {
                     enabled: true,
-                    type: "progressbar"
-                  }
-                }
+                    type: "progressbar",
+                  },
+                },
               }}
             >
               {slidesData.map((slide, index) => (
@@ -500,25 +492,25 @@ const Home = () => {
           </div>
 
           <div data-aos="fade-up" data-aos-duration="2000" data-aos-delay="0">
-          {slides.map((item, index) => (
-            <div className="Categories" key={index}>
-              <div className="zoom-effect-container-2">
-                <div className="image-card-2">
-                  <Image
-                    src={item.imageSrc}
-                    width={635}
-                    height={674}
-                    alt="Picture of the author"
-                    className="category-image"
-                  />
-                  <div className="category-overlay">
-                    <h1 className="container-4-h1">{item.title}</h1>
+            {slides.map((item, index) => (
+              <div className="Categories" key={index}>
+                <div className="zoom-effect-container-2">
+                  <div className="image-card-2">
+                    <Image
+                      src={item.imageSrc}
+                      width={635}
+                      height={674}
+                      alt="Picture of the author"
+                      className="category-image"
+                    />
+                    <div className="category-overlay">
+                      <h1 className="container-4-h1">{item.title}</h1>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -594,38 +586,65 @@ const Home = () => {
             <h1 className="container-3-h1">News & Updates</h1>
 
             <div className="Updates-0">
+              <Swiper
+                modules={[Scrollbar]}
+                spaceBetween={10}
+                slidesPerView={2}
+                scrollbar={{ draggable: true }}
+                loop={true}
+                breakpoints={{
+                  0: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                  },
+                  640: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                  },
+                  768: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 10,
+                  },
+                  1000: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                  },
+                  1400: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                  },
+                }}
+              >
+                {sampleSlides.map((item, index) => (
+                  <SwiperSlide key={index}>
+                    <div class="zoom-effect-container-4">
+                      <div class="image-card-4">
+                        <Image
+                          src={item.imageSrc}
+                          width={500}
+                          height={500}
+                          alt={item.imageAlt}
+                        />
+                      </div>
+                    </div>
+                    <div className="conatiner-6-desc">
+                      <div>
+                        <h1 className="container-6-h">{item.title}</h1>
+                        <p className="container-6-p">{item.description}</p>
+                      </div>
 
-            <Swiper
-              modules={[Scrollbar]}
-              spaceBetween={10}
-              slidesPerView={2}
-              scrollbar={{ draggable: true }}
-              loop={true}
-              breakpoints={{
-                0: {
-                  slidesPerView: 1,
-                  spaceBetween: 10,
-                },
-                640: {
-                  slidesPerView: 1,
-                  spaceBetween: 10,
-                },
-                768: {
-                  slidesPerView: 1.5,
-                  spaceBetween: 10,
-                },
-                1000: {
-                  slidesPerView: 2,
-                  spaceBetween: 10,
-                },
-                1400: {
-                  slidesPerView: 2,
-                  spaceBetween: 10,
-                },
-              }}
-            >
+                      <Link href="/#" className="container-6-btn">
+                        {item.buttonX}
+                      </Link>
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+
+            <div data-aos="fade-up" data-aos-duration="2000" data-aos-delay="0">
               {sampleSlides.map((item, index) => (
-                <SwiperSlide key={index}>
+                <div className="Updates" key={index}>
                   <div class="zoom-effect-container-4">
                     <div class="image-card-4">
                       <Image
@@ -646,39 +665,9 @@ const Home = () => {
                       {item.buttonX}
                     </Link>
                   </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-            </div>
-
-
-            <div data-aos="fade-up" data-aos-duration="2000" data-aos-delay="0">
-            {sampleSlides.map((item, index) => (
-            <div className="Updates" key={index}>
-              <div class="zoom-effect-container-4">
-                <div class="image-card-4">
-                  <Image
-                    src={item.imageSrc}
-                    width={500}
-                    height={500}
-                    alt={item.imageAlt}
-                  />
                 </div>
-              </div>
-              <div className="conatiner-6-desc">
-                <div>
-                  <h1 className="container-6-h">{item.title}</h1>
-                  <p className="container-6-p">{item.description}</p>
-                </div>
-
-                <Link href="/#" className="container-6-btn">
-                  {item.buttonX}
-                </Link>
-              </div>
-            </div>
               ))}
-               </div>
-
+            </div>
           </div>
         </div>
       </div>
