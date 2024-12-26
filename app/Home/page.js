@@ -208,9 +208,9 @@ const Home = () => {
         <div className={scroll ? "wrapperY" : "wrapperX"}>
           <div className="left-section">
             <div className={scroll ? "icon_containerX" : "icon_container"}>
-              <div className={scroll ? "icon-1-X" : "icon-1"}>
+              <Link href="/#" className={scroll ? "icon-1-X" : "icon-1"}>
                 <PersonIcon className={scroll ? "div1Icon_X" : "div1Icon"} />
-              </div>
+             </Link>
               <select className={scroll ? "drop_1-X" : "drop_1"}>
                 <option value="EN">EN</option>
                 <option value="ML">ML</option>
