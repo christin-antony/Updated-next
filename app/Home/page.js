@@ -219,7 +219,9 @@ const Home = () => {
           </div>
 
           <div className="center-section">
-            <img 
+            <Image
+            width={100}
+            height={100}
               src={scroll ? "/images/Nlogo.png" : "/images/logo.png"} 
               alt="logoX" 
               className={scroll ? "imgY" : "imgX"} 
@@ -324,7 +326,7 @@ const Home = () => {
               }}
               style={{
                 "--swiper-pagination-color": "#380913",
-                "--swiper-pagination-progressbar-bg-color": "#ffffff",
+                "--swiper-pagination-progressbar-bg-color": "#e1e0e0",
                 "--swiper-pagination-bottom": "0px",
                 "--swiper-navigation-color": "#380913",
               }}
@@ -381,7 +383,7 @@ const Home = () => {
                   },
                 },
                 1400: {
-                  slidesPerView: 2,
+                  slidesPerView: 2.5,
                   spaceBetween: 30,
                   navigation: {
                     enabled: false,
@@ -602,7 +604,7 @@ const Home = () => {
                     </div>
                   </div>
 
-                  <h1 className="container-5-h">{slide.title}</h1>
+                  <h1 className="slider-1-h1 ">{slide.title}</h1>
                   <p className="container-5-p">{slide.description}</p>
                 </SwiperSlide>
               ))}
@@ -660,7 +662,7 @@ const Home = () => {
                     </div>
                     <div className="conatiner-6-desc">
                       <div>
-                        <h1 className="container-6-h">{item.title}</h1>
+                        <h1 className="slider-1-h1">{item.title}</h1>
                         <p className="container-6-p">{item.description}</p>
                       </div>
 
@@ -688,7 +690,7 @@ const Home = () => {
                   </div>
                   <div className="conatiner-6-desc">
                     <div>
-                      <h1 className="container-6-h">{item.title}</h1>
+                      <h1 className="slider-1-h1">{item.title}</h1>
                       <p className="container-6-p">{item.description}</p>
                     </div>
 

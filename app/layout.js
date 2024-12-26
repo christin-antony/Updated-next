@@ -1,9 +1,53 @@
-import { Inter } from "next/font/google";
+
+import localFont from 'next/font/local'; 
 import "./globals.css";
 import 'aos/dist/aos.css';
 import AOSInit from './components/AOSInit';
 
-const inter = Inter({ subsets: ["latin"] });
+const latef = localFont({
+  src: [
+    {
+      path: '../public/fonts/lateef/LateefRegOT.ttf',
+      weight: '400',
+      style: 'normal',
+    }
+  ],
+  variable: '--font-latef',
+});
+
+const quich = localFont({
+  src: [
+    {
+      path: '../public/fonts/Demo_Fonts/Fontspring-DEMO-quichesans-medium.otf',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: '../public/fonts/Demo_Fonts/Fontspring-DEMO-quichesans-bold.otf',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: '../public/fonts/Demo_Fonts/Fontspring-DEMO-quichesans-light.otf',
+      weight: '300',
+      style: 'normal',
+    }
+  ],
+  variable: '--font-quich',
+});
+
+const latefLight = localFont({
+  src: [
+    {
+      path: '../public/fonts/lateef-cufonfonts-webfont/Lateef-Light.woff',
+      weight: '300',
+      style: 'normal',
+    }
+  ],
+  variable: '--font-latef-light',
+});
+
+
 
 export const metadata = {
   title: "task-1",
@@ -12,14 +56,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html>
-    <head>
-      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    </head>
-    <body>
-      <AOSInit />
-      {children}
-    </body>
-  </html>
+    <html lang="en" className={`${latef.variable} ${quich.variable} ${latefLight.variable}`}>
+      <body>
+        <AOSInit />
+        {children}
+      </body>
+    </html>
   );
 }

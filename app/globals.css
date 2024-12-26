@@ -1,17 +1,3 @@
-@font-face {
-  font-family: "latef";
-  src: url(/fonts/lateef/LateefRegOT.ttf);
-}
-
-@font-face {
-  font-family: "quich";
-  src: url(./fonts/Demo_Fonts/Fontspring-DEMO-quichesans-medium.otf);
-}
-
-@font-face {
-  font-family: "latef-";
-  src: url(./fonts/lateef-cufonfonts-webfont/Lateef-Light.woff);
-}
 
 body {
   padding: 0;
@@ -22,6 +8,18 @@ body {
 :root {
   --mainColor: #cecccc;
   --slide-1-color: #380913;
+}
+
+.font-latef {
+  font-family: var(--font-latef);
+}
+
+.font-quich {
+  font-family: var(--font-quich);
+}
+
+.font-latef-light {
+  font-family: var(--font-latef-light);
 }
 
 /* page-1 */
@@ -219,7 +217,7 @@ body {
   font-weight: 300;
   text-decoration: none;
   color: #ffffff;
-  font-family: "latef";
+  font-family:var(--font-latef);
   transition: color 0.3s ease;
   transition: all 0.3s ease-in-out;
 }
@@ -242,7 +240,7 @@ body {
   font-weight: 300;
   text-decoration: none;
   color: #380913;
-  font-family: "latef";
+  font-family:var(--font-latef);
   transition: all 0.3s ease-in-out;
 }
 
@@ -273,8 +271,8 @@ body {
   font-size: 24px;
   color: white;
   border: none;
-  font-weight: lighter;
-  font-family: "latef";
+  font-weight: 300;
+  font-family:var(--font-latef);
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
@@ -287,8 +285,8 @@ body {
   font-size: 24px;
   color: #380913;
   border: none;
-  font-weight: lighter;
-  font-family: "latef";
+  font-weight: 300;
+  font-family: var(--font-latef);
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
@@ -469,7 +467,7 @@ body {
   display: block;
   font-size: clamp(23px, 4vw, 32px);
   font-weight: bold;
-  font-family: "latef-";
+  font-family:var(--font-latef-light);
   margin: 0px;
 }
 .aY {
@@ -479,7 +477,7 @@ body {
   display: block;
   font-size: clamp(21px, 4vw, 30px);
   font-weight: lighter;
-  font-family: "latef-";
+  font-family: var(--font-latef-light);
   margin: 0px;
 }
 
@@ -544,16 +542,7 @@ body {
     padding: 15px 15px;}
 
 }
-/* @media (max-width: 320px) {
-  .imgX {
-    width: 102.5px !important ;
-    height: 60px !important;
-  }
-  .sidenav {
-    top: 11%;
-  }
 
-} */
 @media (max-width: 425px) {
   .imgX {
     width: 102.5px !important ;
@@ -611,12 +600,12 @@ body {
 
 .hero-titlE {
   font-size: clamp(35px, 8vw, 80px);
-  font-weight: lighter;
+  font-weight:500;
   color: #ffffff;
   margin-bottom: 15%;
   margin-top: 0%;
   padding-top: 35%;
-  font-family: "quich";
+  font-family:var(--font-quich);
   line-height: clamp(36px, 6vw, 88px);
   width: 51%;
   height: 144px;
@@ -664,7 +653,7 @@ body {
   border: 1px solid var(--mainColor);
   background-color: transparent;
   padding: 15px 30px;
-  font-family: "latef";
+  font-family: var(--font-latef);
   line-height: 30px;
   appearance: none;
   -webkit-appearance: none;
@@ -693,7 +682,7 @@ body {
   color: #ffffff;
   background-color: #1c040b;
   border: none;
-  font-family: "latef";
+  font-family: var(--font-latef);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -888,9 +877,9 @@ body {
 }
 
 .container-3-h1 {
-  font-family: "quich";
+  font-family: var(--font-quich);
   font-size: clamp(20px, 8vw, 40px);
-  font-weight: lighter;
+  font-weight: 500;
   color: #380913;
   padding-top: 80px;
   padding-bottom: 30px;
@@ -898,21 +887,22 @@ body {
 }
 
 .slider-1-p1 {
-  font-size: 17px;
-  font-family: "latef";
+  font-size: 22px;
+  font-family:var(--font-latef);
   font-weight: lighter;
   color: var(--slide-1-color);
   margin: 0;
   padding-top: 30px;
-  padding-bottom: 10px;
+  padding-bottom: 0px;
   width: 70%;
   text-align: left;
+ 
 }
 
 .slider-1-h1 {
-  font-size: 28px;
+  font-size: 40px;
   font-weight: 600;
-  font-family: "latef";
+  font-family: var(--font-latef);
   color: var(--slide-1-color);
   margin: 0;
   padding: 5px 0;
@@ -921,13 +911,13 @@ body {
 }
 
 .slider-1-p2 {
-  font-size: 19px;
-  font-family: "latef";
+  font-size: 26px;
+  font-family:var(--font-latef);
   font-weight: lighter;
   color: var(--slide-1-color);
   margin: 0;
   padding: 10px 0;
-  width: 75%;
+  width: 90%;
   text-align: left;
   padding-bottom: 100px;
 }
@@ -1185,7 +1175,7 @@ body {
   color: white;
   text-align: center;
   width: 90%;
-  font-family: "quich";
+  font-family: var(--font-quich);
   transition: all 700ms ease-in-out;
 }
 
@@ -1377,21 +1367,22 @@ body {
 }
 
 .container-5-p {
-  font-size: 17px;
-  font-family: "latef";
-  font-weight: lighter;
-  width: 57%;
+  font-size: 25px;
+  font-family: var(--font-latef);
+  font-weight: 200;
+  width: 70%;
   color: var(--slide-1-color);
-  margin: 15px 0;
+  margin: 0;
 }
 
 .container-5-h {
-  font-size: 24px;
-  font-family: "latef";
-  font-weight: lighter;
+  font-size: 40px;
+  font-family: var(--font-latef);
+  font-weight:500 !important;
   width: 75%;
   color: var(--slide-1-color);
   margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -1565,18 +1556,23 @@ body {
 }
 
 .container-6-h {
-  font-size: 27px;
-  width: 75%;
-  font-family: "latef";
+  font-size: 40px;
+  width: 95%;
+  font-family: var(--font-latef);
   color: var(--slide-1-color);
+  font-weight: 500;
+margin-top: 10px;
+  margin-bottom: 10px;
+
 }
 
 .container-6-p {
-  font-size: 17px;
+  font-size: 24px;
   width: 73%;
   color: var(--slide-1-color);
-  font-family: "latef";
+  font-family: var(--font-latef);
   margin: 15px 0;
+  font-weight: 200;
 }
 
 .container-6-btn {
@@ -1589,6 +1585,8 @@ body {
   align-items: center;
   justify-content: center;
   transition: background-color 0.3s ease;
+  font-weight: 300;
+  font-size: 25px;
 }
 
 .container-6-btn:hover {
@@ -1728,17 +1726,18 @@ body {
   font-size: 50px;
   max-width: 524px;
   color: #fff;
-  font-family: "quich";
+  font-family:var(--font-quich);
   font-weight: lighter;
   margin-bottom: 20px;
+  font-weight: 500;
 }
 
 .container-7-p {
   font-size: 24px;
-  font-family: "latef-";
+  font-family: var(--font-latef-light);
   max-width: 495px;
   color: #ffffff;
-  font-weight: lighter;
+  font-weight: 200;
   line-height: 26px;
   margin-bottom: 30px;
 }
@@ -1747,8 +1746,8 @@ body {
   width: 223px;
   height: 62px;
   background-color: #ffffff;
-  font-size: 21px;
-  font-family: "latef";
+  font-size: 25px;
+  font-family: var(--font-latef);
   color: #1c040b;
   border: none;
   text-decoration: none;
@@ -1756,6 +1755,7 @@ body {
   justify-content: center !important;
   align-items: center;
   transition: all 0.3s ease;
+  font-weight: 300;
 }
 
 @media screen and (max-width: 1400px) {
@@ -1852,8 +1852,8 @@ body {
 
 .container-8-h-X {
   font-size: clamp(20px, 8vw, 40px);
-  font-family: "quich";
-  font-weight: lighter;
+  font-family: var(--font-quich);
+  font-weight: 500;
   color: var(--slide-1-color);
   text-align: center;
   margin-top: clamp(50px, 8vw, 100px);
@@ -1862,9 +1862,9 @@ body {
 
 .container-8-h {
   color: #380913;
-  font-family: "latef-";
+  font-family: var(--font-latef-light);
   font-size: 25px;
-  font-weight: lighter;
+  font-weight:300;
   text-align: center;
   padding-bottom: 30px;
   margin: 0;
@@ -2073,14 +2073,14 @@ body {
   color: #ffffff;
   font-size: 40px;
   font-weight: 500;
-  font-family: "quich";
+  font-family: var(--font-quich);
   text-align: center;
   margin-bottom: 0px;
 }
 
 .container-9-1-p {
   font-size: 24px;
-  font-family: "latef-";
+  font-family: var(--font-latef-light);
   color: #ffffff;
   font-weight: 200;
   max-width: 913.76px;
@@ -2095,7 +2095,7 @@ body {
   height: 69px;
   color: #1c040b;
   background-color: #ede8e1;
-  font-family: "latef-";
+  font-family:var(--font-latef-light);
   font-weight: 300;
   font-size: 25px;
   margin-top: 30px;
@@ -2190,7 +2190,7 @@ body {
   display: flex;
   justify-content: left;
   margin-top: 100px;
-  gap: 25%;
+  gap: 32.5%;
 }
 
 .submit-div {
@@ -2199,8 +2199,8 @@ body {
 }
 
 .container-9-2-1-image {
-  width: 328px;
-  height: 196px;
+  width: 228px;
+  height: 130px;
 }
 
 .input-div {
@@ -2223,7 +2223,7 @@ body {
 .container-9-2-1-input::placeholder {
   color: #ede8e1;
   font-size: 22px;
-  font-family: "latef-";
+  font-family: var(--font-latef-light);
   font-weight: lighter;
 }
 
@@ -2233,16 +2233,17 @@ body {
   margin: 0px;
   padding: 0px;
   font-size: 22px;
-  font-family: "latef-";
+  font-family: var(--font-latef-light);
   font-weight: 500;
 }
 
 .container-9-2-1-h {
   color: #ede8e1;
-  font-family: "latef-";
+  font-family: var(--font-latef-light);
   font-size: clamp(28px, 8vw, 30px);
   font-weight: 500;
-  margin-top: 75px;
+  margin-top: 25px;
+  
 }
 
 .footr {
@@ -2347,36 +2348,36 @@ body {
 }
 
 .footer-h {
-  font-size: clamp(25px, 3vw, 35px);
-  font-family: "latef-";
+  font-size: clamp(18px, 3vw, 26px);
+  font-family: var(--font-latef-light);
   color: #ede8e1;
   margin: 0px;
-  font-weight: lighter;
+  font-weight: 600;
 }
 
 .footer-p1 {
-  font-size: 27px;
+  font-size: 28px;
   font-size: clamp(20px, 3vw, 28px);
-  font-family: "latef-";
+  font-family: var(--font-latef-light);
   color: #ede8e1;
   margin: 0;
-  font-weight: lighter;
+  font-weight: 300;
 }
 
 .footer-p1x {
-  font-size: 27px;
+  font-size: 28px;
   font-size: clamp(20px, 3vw, 28px);
   font-weight: 300;
-  font-family: "latef-";
+  font-family: var(--font-latef-light);
   color: #ede8e1;
   margin: 0;
-  padding-top: 38px;
+  padding-top: 20px;
 }
 
 .footer-p1-last {
-  font-size: clamp(18px, 3vw, 25px);
+  font-size: clamp(20px, 3vw, 28px);
   font-weight: 300;
-  font-family: "latef-";
+  font-family: var(--font-latef-light);
   color: #ede8e1;
   margin: 0;
   width: 55%;
@@ -2424,8 +2425,8 @@ body {
 .container-10-p1 {
   margin: 0px;
   font-size: clamp(15px, 2vw, 25px);
-  font-weight: lighter;
-  font-family: "latef-";
+  font-weight: 300;
+  font-family:var(--font-latef-light);
   color: #ede8e1;
   padding-top: 3%;
   padding-bottom: 3%;
@@ -2433,8 +2434,8 @@ body {
 .container-10-p2 {
   margin: 0px;
   font-size: clamp(15px, 2vw, 25px);
-  font-weight: lighter;
-  font-family: "latef-";
+  font-weight: 300;
+  font-family: var(--font-latef-light);
   color: #ede8e1;
   padding-top: 3%;
   padding-bottom: 3%;
