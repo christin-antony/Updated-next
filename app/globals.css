@@ -690,6 +690,11 @@ body {
   justify-content: center;
   text-decoration: none;
 }
+.search-rates-button:hover{
+
+  background-color: #830226;
+
+}
 
 @media screen and (max-width: 1200px) {
   .booking-dropdown {
@@ -767,7 +772,6 @@ body {
   .search-rates-button{
     font-size: 13px !important ;
   }
-
  
 }
 
@@ -912,6 +916,16 @@ body {
 }
 
 .slider-1-h1 {
+  font-size: 40px;
+  font-weight: 600;
+  font-family: var(--font-latef);
+  color: var(--slide-1-color);
+  margin: 0;
+  padding: 5px 0;
+  width: 75%;
+  text-align: left;
+}
+.slider-1-h1X {
   font-size: 40px;
   font-weight: 600;
   font-family: var(--font-latef);
@@ -1602,7 +1616,7 @@ margin-top: 10px;
 }
 
 .container-6-btn:hover {
-  background-color: #4a0b1a;
+  background-color:#830226;
 }
 
 @media screen and (max-width: 1200px) {
@@ -1614,7 +1628,7 @@ margin-top: 10px;
     height: 500px;
   }
 
-  .container-6-h {
+  .slider-1-h1X  {
     font-size: 24px;
   }
   .hero-section-5 {
@@ -1631,7 +1645,7 @@ margin-top: 10px;
     height: 400px;
   }
 
-  .container-6-h {
+  .slider-1-h1X {
     font-size: 22px;
     width: 100%;
   }
@@ -1639,6 +1653,10 @@ margin-top: 10px;
   .container-6-p {
     font-size: 16px;
     width: 100%;
+   
+  }
+  .container-6-btn{
+    font-size: 20px;
   }
 }
 
@@ -1651,16 +1669,17 @@ margin-top: 10px;
   .container-6-btn {
     width: 100%;
     margin-top: 20px;
+    font-size: 18px;
   }
 
-  .container-6-h {
-    font-size: 20px;
-    text-align: center;
+  .slider-1-h1X{
+    text-align: center !important;
+    font-size: 20px !important;
   }
 
   .container-6-p {
     font-size: 15px;
-    text-align: center;
+    text-align: center !important;
   }
 }
 
@@ -1694,12 +1713,15 @@ margin-top: 10px;
     padding: 15px 4%;
   }
 
-  .container-6-h {
+  .slider-1-h1X {
     font-size: 18px;
   }
 
   .container-6-p {
     font-size: 14px;
+  }
+  .container-6-btn{
+    font-size: 15px;
   }
 }
 
@@ -1768,6 +1790,11 @@ margin-top: 10px;
   align-items: center;
   transition: all 0.3s ease;
   font-weight: 300;
+}
+.container-7-btn:hover{
+
+  background-color:beige;
+
 }
 
 @media screen and (max-width: 1400px) {
@@ -2117,6 +2144,9 @@ margin-top: 10px;
   text-decoration: none;
   margin: 30px auto 0;
 }
+.container-9-1-btn:hover {
+  background-color: white;
+}
 
 @media screen and (max-width: 1200px) {
   .container-9-1-p {
@@ -2247,6 +2277,10 @@ margin-top: 10px;
   font-size: 22px;
   font-family: var(--font-latef-light);
   font-weight: 500;
+  cursor: pointer;
+}
+.container-9-2-1-btn:hover{
+  background-color:burlywood;
 }
 
 .container-9-2-1-h {

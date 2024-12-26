@@ -662,7 +662,7 @@ const Home = () => {
                     </div>
                     <div className="conatiner-6-desc">
                       <div>
-                        <h1 className="slider-1-h1">{item.title}</h1>
+                        <h1 className="slider-1-h1X">{item.title}</h1>
                         <p className="container-6-p">{item.description}</p>
                       </div>
 
@@ -690,7 +690,7 @@ const Home = () => {
                   </div>
                   <div className="conatiner-6-desc">
                     <div>
-                      <h1 className="slider-1-h1">{item.title}</h1>
+                      <h1 className="slider-1-h1X">{item.title}</h1>
                       <p className="container-6-p">{item.description}</p>
                     </div>
 
