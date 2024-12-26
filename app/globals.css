@@ -30,7 +30,7 @@ body {
   position: fixed;
   z-index: 10002;
   width: 100%;
-  background-color:blue;
+  background-color:transparent;
   border-bottom: 1px solid #a0a0a0;
   backdrop-filter: blur(20px);
   justify-content: center;
@@ -39,7 +39,7 @@ body {
   position: fixed;
   z-index: 1002;
   width: 100%;
-  background-color:#e1ede3;
+  background-color:#EDE8E1;
   justify-content: center;
 }
 
