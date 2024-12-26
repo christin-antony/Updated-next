@@ -34,6 +34,7 @@ body {
   border-bottom: 1px solid #a0a0a0;
   backdrop-filter: blur(20px);
   justify-content: center;
+  transition: all 0.3s ease-in-out;
 }
 .container0 {
   position: fixed;
@@ -41,6 +42,8 @@ body {
   width: 100%;
   background-color:#EDE8E1;
   justify-content: center;
+  transition: all 0.3s ease-in-out;
+  
 }
 
 .wrapperX {
@@ -52,6 +55,7 @@ body {
   width: 100%;
   margin: auto;
   box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
 }
 .wrapperY {
   padding: 10px 15px;
@@ -62,6 +66,8 @@ body {
   width: 100%;
   margin: auto;
   box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+ 
 }
 
 .left-section {
@@ -96,7 +102,7 @@ body {
 
 .activeHamburger {
   background: transparent;
-  transform: translateX(-50px);
+  transition: all 0.3s ease-in-out;
 }
 
 .sidenav {
@@ -105,7 +111,7 @@ body {
   height: 100vh;
   background: white;
   transform: translateY(-150%);
-  transition: all 900ms ease-in-out;
+  transition: transform 0.3s ease-in-out;
   top: 20.5%; 
   z-index: 1001;
   display: none;
@@ -117,17 +123,16 @@ body {
   height: 100vh;
   background: white;
   transform: translateY(-150%);
-  transition: all 900ms ease-in-out;
+  transition: transform 0.3s ease-in-out;
   top: 8.5%; 
   z-index: 1001;
   display: none;
- 
-
 }
 
 .activeSidenav {
   transform: translateY(0);
   padding-top: 5%;
+  transition: transform 0.3s ease-in-out;
 }
 
 .icon_container {
@@ -136,13 +141,17 @@ body {
   align-items: center;
   gap: 10px;
   margin-top: 45px;
+  transition: all 0.3s ease-in-out;
+}
+.icon-1:hover .div1Icon{
+ color: goldenrod;
 }
 .icon_containerX {
   display: flex;
   justify-content: left;
   align-items: center;
   gap: 10px;
- 
+  transition: all 0.3s ease-in-out;
 }
 
 .icon-1 {
@@ -157,8 +166,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s ease-in-out;
 }
-
 
 .icon-1-Y {
   width: 33px;
@@ -175,6 +184,7 @@ body {
   right: 22%;
   position: absolute;
   display: none;
+  transition: all 0.3s ease-in-out;
 }
 
 .icon-1-X {
@@ -189,7 +199,11 @@ body {
   transition: color 0.3s ease;
   cursor: pointer;
   display: block;
+  transition: all 0.3s ease-in-out;
 }
+.icon-1-X:hover .div1Icon_X{
+  color: goldenrod;
+ }
 
 .nav-right ul {
   display: flex;
@@ -207,6 +221,7 @@ body {
   color: #ffffff;
   font-family: "latef";
   transition: color 0.3s ease;
+  transition: all 0.3s ease-in-out;
 }
 
 .nav-right a:hover {
@@ -218,8 +233,8 @@ body {
   justify-content: end;
   gap: 15%;
   list-style-type: none;
-  /* margin-top: 55px; */
   padding: 0;
+  
 }
 
 .nav-right-X a {
@@ -228,7 +243,7 @@ body {
   text-decoration: none;
   color: #380913;
   font-family: "latef";
-  transition: color 0.3s ease;
+  transition: all 0.3s ease-in-out;
 }
 
 .nav-right-X a:hover {
@@ -261,9 +276,10 @@ body {
   font-weight: lighter;
   font-family: "latef";
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
-.drop_1 :hover {
-  color: goldenrod;
+.drop_1:hover {
+  color: goldenrod !important;
 }
 
 .drop_1-X {
@@ -274,19 +290,22 @@ body {
   font-weight: lighter;
   font-family: "latef";
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
-.drop_1-X :hover {
-  color: goldenrod;
+.drop_1-X:hover {
+  color: goldenrod !important;
 }
 
 .imgX {
   width: 205px;
   height: 119px;
+  transition: all 0.3s ease-in-out;
 }
 .imgY {
   width: 100px;
   height: 60px;
+  transition: all 0.3s ease-in-out;
 }
 
 .hamburger {
@@ -295,7 +314,7 @@ body {
   background: #380913;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
   position: absolute;
   top: 54%;
   right: 8%;
@@ -311,7 +330,7 @@ body {
   height: 3px;
   background: #380913;
   border-radius: 5px;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
   transform: translateY(-10px);
 }
 
@@ -322,17 +341,17 @@ body {
   height: 3px;
   background: #380913;
   border-radius: 5px;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
   transform: translateY(10px);
 }
 
 .hamburgerX {
   width: clamp(5px, 4vw, 20px);
   height: 3px;
-  background: white;
+  background:white;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
   position: absolute;
   top: 54%;
   right: 8%;
@@ -346,9 +365,9 @@ body {
   position: absolute;
   width: clamp(8px, 6vw, 30px);
   height: 3px;
-  background: white;
+  background:white;
   border-radius: 5px;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
   transform: translateY(-10px);
 }
 
@@ -357,9 +376,9 @@ body {
   position: absolute;
   width: clamp(8px, 6vw, 30px);
   height: 3px;
-  background: white;
+  background:white;
   border-radius: 5px;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
   transform: translateY(10px);
 }
 
@@ -369,7 +388,7 @@ body {
   border-radius: 5px;
   transform: translateX(-50px);
   background: transparent;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
   z-index: 10000;
 }
 
@@ -380,7 +399,7 @@ body {
   height: 3px;
   background: #380913;
   border-radius: 5px;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
   transform: rotate(45deg) translate(35px, -35px);
 }
 
@@ -391,7 +410,39 @@ body {
   height: 3px;
   background: #380913;
   border-radius: 5px;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.activeHamburgerX {
+  width: clamp(15px, 4vw, 30px);
+  height: 3px;
+  border-radius: 5px;
+  transform: translateX(-50px);
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+  z-index: 10000;
+}
+
+.activeHamburgerX::before {
+  content: "";
+  position: absolute;
+  width: clamp(15px, 4vw, 30px);
+  height: 3px;
+  background:white;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  transform: rotate(45deg) translate(35px, -35px);
+}
+
+.activeHamburgerX::after {
+  content: "";
+  position: absolute;
+  width: clamp(15px, 4vw, 30px);
+  height: 3px;
+  background:white;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
   transform: rotate(-45deg) translate(35px, 35px);
 }
 
@@ -480,7 +531,20 @@ body {
     display: block;
   }
 }
-@media (max-width: 320px) {
+
+@media (max-width: 768px) {
+  .imgX {
+    width: 170.5px !important ;
+    height: 90px !important;
+  }
+  .sidenav {
+    top: 13%;
+  }
+  .wrapperX {
+    padding: 15px 15px;}
+
+}
+/* @media (max-width: 320px) {
   .imgX {
     width: 102.5px !important ;
     height: 60px !important;
@@ -489,14 +553,14 @@ body {
     top: 11%;
   }
 
-}
+} */
 @media (max-width: 425px) {
   .imgX {
-    width: 150.5px !important ;
-    height: 80px !important;
+    width: 102.5px !important ;
+    height: 60px !important;
   }
   .sidenav {
-    top: 12.5%;
+    top: 10.5%;
   }
   .wrapperX {
     padding: 15px 15px;}
@@ -1325,7 +1389,7 @@ body {
   font-size: 24px;
   font-family: "latef";
   font-weight: lighter;
-  width: 31%;
+  width: 75%;
   color: var(--slide-1-color);
   margin-top: 20px;
 }

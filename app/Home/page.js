@@ -236,7 +236,9 @@ const Home = () => {
             </nav>
 
             <div className="hamburgerIcon"  onClick={() => setActive(!active)}>
-              <div className={`${scroll ? "hamburger" : "hamburgerX"} ${active ? "activeHamburger" : ""}`}></div>
+            <div className={`${scroll ? "hamburger" : "hamburgerX"} ${
+                active ? (scroll ? "activeHamburger" : "activeHamburgerX") : ""
+              }`}></div>
             </div>
           </div>
         </div>
