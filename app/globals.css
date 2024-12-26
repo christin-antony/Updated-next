@@ -198,6 +198,7 @@ body {
   cursor: pointer;
   display: block;
   transition: all 0.3s ease-in-out;
+  color:#380913 !important;
 }
 .icon-1-X:hover .div1Icon_X{
   color: goldenrod;
@@ -283,7 +284,7 @@ body {
 .drop_1-X {
   background-color: transparent;
   font-size: 24px;
-  color: #380913;
+  color: #380913 ;
   border: none;
   font-weight: 300;
   font-family: var(--font-latef);
@@ -705,25 +706,27 @@ body {
 }
 @media screen and (max-width: 1024px) {
   .custom-list {
-    flex-direction: column;
+    grid-template-columns: repeat(2, 1fr);
     gap: 15px;
+    padding: 0 0px;
   }
-
-  .custom-list li {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-
-  .custom-list li:last-child {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-
+  
   .booking-dropdown {
-    font-size: 20px;
+    font-size: 18px;
+    padding: 15px 15px;
+  }
+  
+  .dropdown-li::after {
+    right: 15px;
+  }
+  .booking-dropdown {
+    font-size: 20px !important;
   }
   .hero-sectioN {
-    height: 110vh;
+    height: 95vh;
+  }
+  .search-rates-button{
+    font-size: 15px;
   }
 }
 
@@ -739,13 +742,13 @@ body {
     height: 55px;
   }
   .hero-sectioN {
-    height: 100vh;
+    height: 90vh;
   }
 }
 
 @media screen and (max-width: 768px) {
   .hero-sectioN {
-    height: 90vh;
+    height: 75vh;
   }
 
   .container-2-hero {
@@ -757,7 +760,21 @@ body {
 
     padding-top: 45%;
   }
+  .booking-dropdown {
+    font-size: 14px !important;
+    padding: 15px 15px;
+  }
+  .search-rates-button{
+    font-size: 13px !important ;
+  }
 
+ 
+}
+
+@media screen and (max-width: 576px) {
+  .hero-sectioN {
+    height: 80vh;
+  }
   .custom-list {
     flex-direction: column;
     gap: 10px;
@@ -785,13 +802,19 @@ body {
     font-size: 16px;
     height: 50px;
   }
+
+ 
 }
+@media screen and (max-width: 400px) {
+  .hero-titlE {
+    width: 70%;
+    margin-bottom: 5%;
 
-@media screen and (max-width: 576px) {
-  .hero-sectioN {
-    height: 80vh;
+    padding-top: 45%;
   }
-
+  .hero-sectioN {
+    height: 70vh;
+  }
   .booking-dropdown {
     font-size: 14px;
     height: 45px;
@@ -806,17 +829,6 @@ body {
   .dropdown-li::after {
     right: 12px;
     padding: 1.5px;
-  }
-}
-@media screen and (max-width: 400px) {
-  .hero-titlE {
-    width: 70%;
-    margin-bottom: 5%;
-
-    padding-top: 45%;
-  }
-  .hero-sectioN {
-    height: 70vh;
   }
 }
 
