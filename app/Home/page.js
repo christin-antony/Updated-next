@@ -204,16 +204,14 @@ const Home = () => {
 
   return (
     <div>
-      <div  className={` ${scroll ? "container0" : "containerX"}`}>
-        <div  className={` ${scroll ? "wrapperY" : "wrapperX"}`}>
+       <div className={scroll ? "container0" : "containerX"}>
+        <div className={scroll ? "wrapperY" : "wrapperX"}>
           <div className="left-section">
-            <div className={` ${scroll ? "icon_containerX" : "icon_container"}`}>
-              <div className={` ${scroll ? "icon-1-X" : "icon-1"}`}>
-                <PersonIcon
-                  className={` ${scroll ? "div1Icon_X" : "div1Icon"}`}
-                />
+            <div className={scroll ? "icon_containerX" : "icon_container"}>
+              <div className={scroll ? "icon-1-X" : "icon-1"}>
+                <PersonIcon className={scroll ? "div1Icon_X" : "div1Icon"} />
               </div>
-              <select className={` ${scroll ? "drop_1-X" : "drop_1"}`}>
+              <select className={scroll ? "drop_1-X" : "drop_1"}>
                 <option value="EN">EN</option>
                 <option value="ML">ML</option>
               </select>
@@ -221,36 +219,30 @@ const Home = () => {
           </div>
 
           <div className="center-section">
-            <img src={scroll ? "/images/Nlogo.png" : "/images/logo.png"} alt="logoX"  className={` ${scroll ? "imgY" : "imgX"}`} />
+            <img 
+              src={scroll ? "/images/Nlogo.png" : "/images/logo.png"} 
+              alt="logoX" 
+              className={scroll ? "imgY" : "imgX"} 
+            />
           </div>
 
           <div className="right-section">
-            <nav className={` ${scroll ? "nav-right-X" : "nav-right"}`}>
+            <nav className={scroll ? "nav-right-X" : "nav-right"}>
               <ul>
-                <li>
-                  <a href="/#">Collections</a>
-                </li>
-                <li>
-                  <a href="/#">Residences</a>
-                </li>
-                <li>
-                  <a href="/#">Boutiques</a>
-                </li>
+                <li><a href="/#">Collections</a></li>
+                <li><a href="/#">Residences</a></li>
+                <li><a href="/#">Boutiques</a></li>
               </ul>
             </nav>
 
-            <div className="hamburgerIcon" onClick={() => setActive(!active)}>
-              <div
-                className={`${scroll ? "hamburger" : "hamburgerX"} ${
-                  active ? "activeHamburger" : ""
-                }`}
-              ></div>
+            <div className="hamburgerIcon"  onClick={() => setActive(!active)}>
+              <div className={`${scroll ? "hamburger" : "hamburgerX"} ${active ? "activeHamburger" : ""}`}></div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className={`sidenav ${active ? "activeSidenav" : ""}`}>
+      <div className={` ${scroll ? "sidenavX" : "sidenav"} ${active ? "activeSidenav" : ""}`}>
         <ul className="ulX">
           {data.map((item, i) => (
             <li key={i} className="ax-div-1">
@@ -351,7 +343,6 @@ const Home = () => {
                   },
                   pagination: {
                     enabled: false,
-                    type: "progressbar",
                   },
                 },
                 640: {
@@ -368,6 +359,9 @@ const Home = () => {
                 768: {
                   slidesPerView: 1.5,
                   spaceBetween: 30,
+                  navigation: {
+                    enabled: false,
+                  },
                   pagination: {
                     enabled: true,
                     type: "progressbar",
@@ -376,6 +370,9 @@ const Home = () => {
                 1000: {
                   slidesPerView: 2,
                   spaceBetween: 30,
+                  navigation: {
+                    enabled: false,
+                  },
                   pagination: {
                     enabled: true,
                     type: "progressbar",
@@ -384,6 +381,9 @@ const Home = () => {
                 1400: {
                   slidesPerView: 2,
                   spaceBetween: 30,
+                  navigation: {
+                    enabled: false,
+                  },
                   pagination: {
                     enabled: true,
                     type: "progressbar",
@@ -392,6 +392,9 @@ const Home = () => {
                 1600: {
                   slidesPerView: 2.5,
                   spaceBetween: 35,
+                  navigation: {
+                    enabled: false,
+                  },
                   pagination: {
                     enabled: true,
                     type: "progressbar",
@@ -400,6 +403,9 @@ const Home = () => {
                 1800: {
                   slidesPerView: 2.5,
                   spaceBetween: 35,
+                  navigation: {
+                    enabled: false,
+                  },
                   pagination: {
                     enabled: true,
                     type: "progressbar",
@@ -546,14 +552,37 @@ const Home = () => {
                 768: {
                   slidesPerView: 1.5,
                   spaceBetween: 10,
+                  navigation: {
+                    enabled: false,
+                  },
                 },
                 1000: {
                   slidesPerView: 2,
                   spaceBetween: 10,
+                  navigation: {
+                    enabled: false,
+                  },
                 },
                 1400: {
                   slidesPerView: 2,
                   spaceBetween: 10,
+                  navigation: {
+                    enabled: false,
+                  },
+                },
+                1600: {
+                  slidesPerView: 2,
+                  spaceBetween: 10,
+                  navigation: {
+                    enabled: false,
+                  },
+                },
+                1800: {
+                  slidesPerView: 2,
+                  spaceBetween: 10,
+                  navigation: {
+                    enabled: false,
+                  },
                 },
               }}
             >
