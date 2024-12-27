@@ -7,7 +7,7 @@ import AOSInit from './components/AOSInit';
 const latef = localFont({
   src: [
     {
-      path: '../public/fonts/lateef/LateefRegOT.ttf',
+      path: '../public/fonts/LateefRegOT.woff',
       weight: '400',
       style: 'normal',
     }
@@ -18,17 +18,17 @@ const latef = localFont({
 const quich = localFont({
   src: [
     {
-      path: '../public/fonts/Demo_Fonts/Fontspring-DEMO-quichesans-medium.otf',
+      path: '../public/fonts/Fontspring-DEMO-quichesans-medium.woff',
       weight: '500',
       style: 'normal',
     },
     {
-      path: '../public/fonts/Demo_Fonts/Fontspring-DEMO-quichesans-bold.otf',
+      path: '../public/fonts/Fontspring-DEMO-quichesans-bold.woff',
       weight: '700',
       style: 'normal',
     },
     {
-      path: '../public/fonts/Demo_Fonts/Fontspring-DEMO-quichesans-light.otf',
+      path: '../public/fonts/Fontspring-DEMO-quichesans-light.woff',
       weight: '300',
       style: 'normal',
     }
